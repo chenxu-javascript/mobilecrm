@@ -2,10 +2,11 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'fe',
+    modulePrefix: 'qyapp',
+    podModulePrefix: 'qyapp/pods',
     environment,
     rootURL: '/',
-    locationType: 'auto',
+    locationType: 'hash',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -20,6 +21,12 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+    moment: {
+      includeLocales: ['zh-cn']
+    },
+    'boss-qyapp-common': {
+      themeColor: '#4ab4fe'
     }
   };
 
@@ -33,6 +40,7 @@ module.exports = function(environment) {
 
   if (environment === 'test') {
     // Testem prefers this...
+    ENV.rootURL = '/';
     ENV.locationType = 'none';
 
     // keep test console output quieter

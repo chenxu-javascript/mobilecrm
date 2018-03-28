@@ -1,10 +1,37 @@
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
-
+var env = process.env.EMBER_ENV;
+console.log(env);
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
     // Add options here
+    'ember-cli-babel': {
+      includePolyfill: true
+    },
+    babel: {
+      sourceMaps: 'inline',
+      plugins: ['transform-decorators-legacy', 'transform-object-rest-spread']
+    },
+    'ember-cli-qunit': { // turn off jshint
+      useLintTree: false
+    },
+    eslint: {
+      enabled: env != 'production',
+      testGenerator: 'qunit',
+      group: true,
+      rulesDir: 'eslint-rules',
+    },
+    sourcemaps: {
+      enabled: false
+    },
+    autoprefixer: {
+      browsers: ["> 1% in CN", "last 2 versions"]
+    },
+    storeConfigInMeta: false,
+    fingerprint: {
+      extensions: ['js', 'css', 'png', 'jpg', 'jpeg', 'gif', 'svg']
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated

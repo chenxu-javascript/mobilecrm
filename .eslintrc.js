@@ -1,5 +1,6 @@
 module.exports = {
-  root: true,
+  // root: true,
+  parser: "babel-eslint",
   parserOptions: {
     ecmaVersion: 2017,
     sourceType: 'module'
@@ -15,6 +16,15 @@ module.exports = {
     browser: true
   },
   rules: {
+
+  },
+  globals: {
+    "$": false,
+    "Framework7": false,
+    "Dom7": false,
+    "f7app": false,
+    "qq": false,
+    "wx": false
   },
   overrides: [
     // node files
