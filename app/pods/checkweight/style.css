@@ -1,0 +1,41 @@
+.button.btn-add-customer {
+  width: 100px;
+  position: relative;
+  right: -20px;
+  border-radius: 0;
+  z-index: 20;
+}
+.h44 {
+  height: 44px;
+}
+.padding10 {
+  padding: 10px;
+}
+.customer-navbar {
+  z-index: 13000;
+}
+.item-after .button {
+  width: 1.5rem;
+  height: .7rem;
+  font-size: 14px;
+  line-height: .7rem;
+}
+.navbar-through .with-subnavbar .customerlist-page-content {
+  padding-top: 44px;
+}
+.item-subtitle {
+  min-height: 16px;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+.contacts-list {
+  background: #fff;
+}
+.contacts-list li {
+  padding: .2rem 20px;
+}
+.contacts-list li .item-inner input {
+  line-height: 1.5;
+}

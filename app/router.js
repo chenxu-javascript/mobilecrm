@@ -7,7 +7,10 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('index');
+  this.route('not-found', { path: '/*path' });
+  this.route('test');
+  this.route('checkweight', { path: 'check' });
+  this.route('customer');
 });
 
 export default Router;

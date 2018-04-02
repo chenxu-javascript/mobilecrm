@@ -2,8 +2,8 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'qyapp',
-    podModulePrefix: 'qyapp/pods',
+    modulePrefix: 'fe',
+    podModulePrefix: 'fe/pods',
     environment,
     rootURL: '/',
     locationType: 'hash',
@@ -26,8 +26,8 @@ module.exports = function(environment) {
       includeLocales: ['zh-cn']
     },
     'boss-qyapp-common': {
-      themeColor: '#4ab4fe'
-    }
+      themeColor: '#ff7900'
+    },
   };
 
   if (environment === 'development') {

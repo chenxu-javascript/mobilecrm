@@ -1,12 +1,13 @@
 import Component from '@ember/component';
 import $ from 'jquery';
 import { on, observes } from 'ember-computed-decorators';
-import { bsGetToken, bsRunWhen, bsSetupRem } from 'qyapp/models/utils';
+import { bsGetToken, bsRunWhen, bsSetupRem } from 'fe/models/utils';
 import { queryParams } from 'boss-qyapp-common/utils/decorators';
 export default Component.extend({
   domCache: true,
   tagName: '',
   @queryParams() modalshow: false,
+
   @on('didInsertElement')
   @observes('modalshow')
   modalshowChanged() {
@@ -68,7 +69,7 @@ export default Component.extend({
     }, () => !!window.f7app);
 
     let timer = setInterval(() => {
-       bsGetToken();
+      bsGetToken();
     }, 60000);
 
     this.timer = timer;

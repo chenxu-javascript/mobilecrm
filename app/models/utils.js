@@ -20,7 +20,7 @@ import {
 } from 'boss-qyapp-common/models/utils';
 
 if (ZBJConfig.isDev) {
-  ZBJConfig.API_HOST = 'http://app.qy.test.zbjdev.com';
+  ZBJConfig.API_HOST = 'http://m.sell.qy.zbjdev.com';
   // ZBJConfig.API_HOST = 'http://qy.app.test.zbjdev.com';
   // ZBJConfig.API_HOST = 'http://app.qy.zbjdev.com';
 }

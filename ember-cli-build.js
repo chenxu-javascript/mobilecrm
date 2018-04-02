@@ -2,7 +2,6 @@
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 var env = process.env.EMBER_ENV;
-console.log(env);
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
     // Add options here
@@ -10,7 +9,6 @@ module.exports = function(defaults) {
       includePolyfill: true
     },
     babel: {
-      sourceMaps: 'inline',
       plugins: ['transform-decorators-legacy', 'transform-object-rest-spread']
     },
     'ember-cli-qunit': { // turn off jshint

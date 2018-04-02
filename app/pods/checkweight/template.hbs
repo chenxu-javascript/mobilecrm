@@ -1,0 +1,140 @@
+<div class="pages navbar-through">
+    <div class="page with-subnavbar">
+        {{#top-bar classNames="customer-navbar h44" }} 
+            {{#z-tab-bar as |bar|}}
+                {{#each checkArray as |checkitem|}} 
+                    {{#bar.item active=(is-eq tab checkitem.id) onActive=(action (mut tab) checkitem.id)}} 
+                        {{checkitem.name}}
+                    {{/bar.item}} 
+                {{/each}} 
+            {{/z-tab-bar}}
+        {{/top-bar}} 
+        {{!-- {{#if (is-eq tab 2)}}
+        <div class="page-content customerlist-page-content ">
+            <div class="list contacts-list">
+                <div class="list-group">
+                    <ul class="unstyled">
+                        <li class="hairline-bottom">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">姓名 </div>
+                                    {{input class="f16 nopadding nomargin noborder w100p" type="text" placeholder="请输入"}}
+                                </div>
+                            </div>
+                        </li>
+                        <li class="hairline-bottom">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">姓名 </div>
+                                    {{input class="f16 nopadding nomargin noborder" type="text" placeholder="请输入"}}
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content-block">
+                <button class="button button-big button-fill w100p">查 重</button>
+            </div>
+
+        </div>
+        {{/if}} {{#if (is-eq tab 3)}}
+        <div class="page-content customerlist-page-content ">
+            <div class="list contacts-list">
+                <div class="list-group">
+                    <ul class="unstyled">
+                        <li class="hairline-bottom">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">姓名 </div>
+                                    {{input class="f16 nopadding nomargin noborder" type="text" placeholder="请输入"}}
+                                </div>
+                            </div>
+                        </li>
+                        <li class="hairline-bottom">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">姓名 </div>
+                                    {{input class="f16 nopadding nomargin noborder" type="text" placeholder="请输入"}}
+                                </div>
+                            </div>
+                        </li>
+                        <li class="hairline-bottom">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">姓名 </div>
+                                    {{input class="f16 nopadding nomargin noborder" type="text" placeholder="请输入"}}
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content-block">
+                <button class="button button-big button-fill w100p">查 重</button>
+            </div>
+
+        </div>
+        {{/if}} --}}
+<div class="page-content customerlist-page-content ">
+    <div class="list contacts-list">
+         {{#liquid-bind tab class="lf-number-container" as |curPageData|}}
+            {{#if (is-eq tab 2) }}
+                <div class="list-group">
+                    <ul class="unstyled">
+                        <li class="hairline-bottom">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">姓名 </div>
+                                    {{input class="f16 nopadding nomargin noborder w100p" type="text" placeholder="请输入"}}
+                                </div>
+                            </div>
+                        </li>
+                        <li class="hairline-bottom">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">姓名 </div>
+                                    {{input class="f16 nopadding nomargin noborder" type="text" placeholder="请输入"}}
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            {{else if (is-eq tab 3) value=3}}
+                <div class="list-group">
+                    <ul class="unstyled">
+                        <li class="hairline-bottom">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">姓名 </div>
+                                    {{input class="f16 nopadding nomargin noborder" type="text" placeholder="请输入"}}
+                                </div>
+                            </div>
+                        </li>
+                        <li class="hairline-bottom">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">姓名 </div>
+                                    {{input class="f16 nopadding nomargin noborder" type="text" placeholder="请输入"}}
+                                </div>
+                            </div>
+                        </li>
+                        <li class="hairline-bottom">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">姓名 </div>
+                                    {{input class="f16 nopadding nomargin noborder" type="text" placeholder="请输入"}}
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            {{else if (is-eq tab 4) value=4}}
+                dfwefewfew
+            {{/if}}
+        {{/liquid-bind}}
+         
+        </div>
+    </div>
+    </div>
+</div>
