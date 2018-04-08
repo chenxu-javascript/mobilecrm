@@ -24,7 +24,7 @@ module.exports = function(defaults) {
       enabled: false
     },
     autoprefixer: {
-      browsers: ["> 1% in CN", "last 2 versions"]
+      browsers: ['> 1% in CN', 'last 2 versions']
     },
     storeConfigInMeta: false,
     fingerprint: {
